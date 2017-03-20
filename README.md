@@ -1,33 +1,8 @@
-# cz-emoji
+# cz-simple
 
-> Commitizen adapter formatting commit messages using emojis.
+A simple [commitizen] adapter.
 
-
-**cz-emoji** allows you to easily use emojis in your commits using [commitizen].
-
-```sh
-? Select the type of change you are committing: (Use arrow keys)
-❯ feature   🌟  A new feature
-  fix       🐞  A bug fix
-  docs      📚  Documentation change
-  refactor  🎨  A code refactoring change
-  chore     🔩  A chore change
-```
-
-## Install
-
-```bash
-npm install --global cz-emoji
-
-# set as default adapter for your projects
-echo '{ "path": "cz-emoji" }' > ~/.czrc
-```
-
-## Usage
-
-```sh
-$ git cz
-```
+It's is a fork of [Nicolas Gryman](https://github.com/ngryman)'s [https://github.com/ngryman/cz-emoji].
 
 ## Customize
 
@@ -36,7 +11,7 @@ You can customize things for a project by adding a configuration section in your
 ```json
 {
   "config": {
-    "cz-emoji": {}
+    "cz-simple": {}
   }
 }
 ```
@@ -47,41 +22,17 @@ An [Inquirer.js] choices array:
 ```json
 {
   "config": {
-    "cz-emoji": {
+    "cz-simple": {
       "types": [
         {
           "name": "feature \t🌟  A new feature",
-          "value": ":star2:"
+          "value": "🌟"
         }
       ]
     }
   }
 }
 ```
-
-The value `property` must be the emoji itself.
-
-### Scopes
-
-An [Inquirer.js] choices array:
-```json
-{
-  "config": {
-    "cz-emoji": {
-      "scopes": [
-        "home",
-        "accounts",
-        "ci"
-      ]
-    }
-  }
-}
-```
-
-
-## License
-
-MIT © [Nicolas Gryman](http://ngryman.sh)
 
 
 [commitizen]: https://github.com/commitizen/cz-cli

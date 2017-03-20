@@ -15,7 +15,7 @@ const types = require('./lib/types')
  */
 function createQuestions(res) {
   const config = res.pkg.config || {}
-  const emojiConfig = config['cz-emoji'] || {}
+  const emojiConfig = config['cz-simple'] || {}
 
   return [
     {
@@ -25,20 +25,9 @@ function createQuestions(res) {
       choices: emojiConfig.types || types
     },
     {
-      type: emojiConfig.scopes ? 'list' : 'input',
-      name: 'scope',
-      message: 'Specify a scope:',
-      choices: emojiConfig.scopes && [{ name: '[none]', value: '' }].concat(emojiConfig.scopes)
-    },
-    {
       type: 'input',
       name: 'subject',
       message: 'Write a short description:'
-    },
-    {
-      type: 'input',
-      name: 'issues',
-      message: 'List any issue closed:'
     },
     {
       type: 'input',
@@ -55,11 +44,9 @@ function createQuestions(res) {
  * @return {String} Formated git commit message
  */
 function format(answers) {
-  // parentheses are only needed when a scope is present
-  const scope = answers.scope ? '(' + answers.scope.trim() + ') ' : ''
 
   // build head line and limit it to 100
-  const head = truncate(answers.type + ' ' + scope + answers.subject.trim(), 100)
+  const head = truncate(answers.type + ' ' + answers.subject.trim(), 100)
 
   // wrap body at 100
   const body = wrap(answers.body, 100)

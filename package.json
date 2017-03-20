@@ -1,10 +1,9 @@
 {
-  "name": "cz-emoji",
+  "name": "cz-simple",
   "version": "0.1.0",
-  "description": "Commitizen adapter formatting commit messages using emojis.",
-  "author": "Nicolas Gryman <ngryman@gmail.com> (http://ngryman.sh/)",
+  "description": "A simple commitizen adapter.",
+  "author": "Malte B. Blanken, <https://github.com/neknalb>",
   "license": "MIT",
-  "repository": "ngryman/cz-emoji",
   "main": "index.js",
   "engines": {
     "node": ">=4"
@@ -13,10 +12,13 @@
     "index.js",
     "lib/types.json"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neknalb/cz-simple"
+  },
   "keywords": [
     "commitizen",
-    "adapter",
-    "emoji"
+    "adapter"
   ],
   "dependencies": {
     "cli-truncate": "^1.0.0",
