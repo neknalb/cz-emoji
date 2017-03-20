@@ -2,7 +2,7 @@
 
 A simple [commitizen] adapter.
 
-It's is a fork of [Nicolas Gryman](https://github.com/ngryman)'s [https://github.com/ngryman/cz-emoji].
+It's is a fork of [Nicolas Gryman](https://github.com/ngryman)'s [cz-emoji](https://github.com/ngryman/cz-emoji).
 
 ## Customize
 
