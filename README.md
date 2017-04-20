@@ -25,7 +25,7 @@ An [Inquirer.js] choices array:
     "cz-simple": {
       "types": [
         {
-          "name": "feature \t🌟  A new feature",
+          "name": "🌟  A new feature",
           "value": "🌟"
         }
       ]
